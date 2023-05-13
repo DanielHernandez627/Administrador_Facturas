@@ -1,0 +1,113 @@
+{
+    "frutas": [
+       {
+          "id": 1,
+          "nombre": "Manzanas",
+          "precio": 2500
+       },
+       {
+          "id": 2,
+          "nombre": "Platanos",
+          "precio": 2000
+       },
+       {
+          "id": 3,
+          "nombre": "Fresas",
+          "precio": 4000
+       },
+       {
+          "id": 4,
+          "nombre": "Pinas",
+          "precio": 5000
+       }
+    ],
+    "vegetales": [
+       {
+          "id": 5,
+          "nombre": "Lechuga",
+          "precio": 1500
+       },
+       {
+          "id": 6,
+          "nombre": "Tomates",
+          "precio": 3000
+       },
+       {
+          "id": 7,
+          "nombre": "Zanahorias",
+          "precio": 2000
+       },
+       {
+          "id": 8,
+          "nombre": "Pepinos",
+          "precio": 2500
+       }
+    ],
+    "carnes": [
+       {
+          "id": 9,
+          "nombre": "Pollo",
+          "precio": 10000
+       },
+       {
+          "id": 10,
+          "nombre": "Res",
+          "precio": 20000
+       },
+       {
+          "id": 11,
+          "nombre": "Cerdo",
+          "precio": 15000
+       },
+       {
+          "id": 12,
+          "nombre": "Salmon",
+          "precio": 25000
+       }
+    ],
+    "bebidas": [
+       {
+          "id": 13,
+          "nombre": "Agua",
+          "precio": 2000
+       },
+       {
+          "id": 14,
+          "nombre": "Refresco",
+          "precio": 3000
+       },
+       {
+          "id": 15,
+          "nombre": "Cerveza",
+          "precio": 5000
+       },
+       {
+          "id": 16,
+          "nombre": "Vino",
+          "precio": 15000
+       }
+    ],
+    "productos de limpieza": [
+       {
+          "id": 17,
+          "nombre": "Jabon",
+          "precio": 3000
+       },
+       {
+          "id": 18,
+          "nombre": "Limpiador de bano",
+          "precio": 5000
+       },
+       {
+          "id": 19,
+          "nombre": "Detergente",
+          "precio": 7000
+       },
+       {
+          "id": 20,
+          "nombre": "Limpiador de vidrios",
+          "precio": 4000
+       }
+    ]
+ }
+ 
