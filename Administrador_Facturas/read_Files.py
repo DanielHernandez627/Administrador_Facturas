@@ -32,3 +32,13 @@ def read_Json_Val_Product(category_select,product_select):
         if data["nombre"] == product_select:
             valor = data["precio"]
     return valor
+
+
+def search_id_Product(category_select,product_select):
+    with open(name_File, "r") as j:
+        category = json.load(j)
+    products = category[category_select]
+    for data in products:
+        if data["nombre"] == product_select:
+            valor = data["id"]
+    return valor
