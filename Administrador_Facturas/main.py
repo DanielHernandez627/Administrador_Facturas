@@ -5,7 +5,9 @@ import read_Files as rf
 global products
 global price
 products = []
-price = 0
+
+
+
 
 
 def read_products(category_selected):
@@ -46,7 +48,25 @@ def on_select_products(event):
     select_category = select_list_categories.get()
     select_product = event.widget.get()
     price = rf.read_Json_Val_Product(select_category, select_product)
+    producter = select_product
     lb2.config(text="Valor Producto: " + str(price))
+    return select_product
+
+
+def create_row():
+
+    category = select_list_categories.get()
+    product = select_list_products.get()
+    price = rf.read_Json_Val_Product(category, product)
+    id = rf.search_id_Product(category,product)
+    cantidad = int(text_box_cant.get("1.0")) * price
+    table.insert("", tk.END, values=(id, product, cantidad))
+
+
+
+
+
+
 
 
 # Interfaz
@@ -76,7 +96,11 @@ select_list_categories.place(x=25, y=110)
 select_list_categories.current(0)
 select_list_products = ttk.Combobox(window, values=products)
 select_list_products.current(0)
-select_list_products.place(x=190, y=110)
+select_list_products.place(x=180, y=110)
+#boton de guardar compra
+button_save = tk.Button(window,text = "Guardar Compra",command=create_row)
+button_save.pack()
+button_save.place(x=520,y=150)
 
 # Events
 select_list_products.bind("<<ComboboxSelected>>", on_select_products)
@@ -89,10 +113,7 @@ table.column("column3", width=200)
 table.heading("column1", text="ID")
 table.heading("column2", text="Nombre")
 table.heading("column3", text="Precio")
-table.insert("", tk.END, values=(1, "Manzanas", 2500))
-table.insert("", tk.END, values=(2, "Plátanos", 2000))
-table.insert("", tk.END, values=(3, "Fresas", 4000))
-table.insert("", tk.END, values=(4, "Piñas", 5000))
+
 table.place(x=20, y=150)
 
 
