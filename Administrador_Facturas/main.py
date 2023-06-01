@@ -7,7 +7,7 @@ global products
 global price
 products = []
 total = 0
-
+invoice_products = []
 
 def read_products(category_selected):
     for data in rf.read_Json_Product(category_selected):
@@ -61,6 +61,9 @@ def create_row():
     add_values_products(cantidad)
     calcu_iva()
     calcu_total_pay()
+    can1 = text_box_cant.get("1.0", 'end-1c')
+    invoice_products.append([product,cantidad,price,can1])
+    print(invoice_products)
     table.insert("", tk.END, values=(id, product, cantidad))
 
 
