@@ -1,0 +1,16 @@
+{
+    "ConstantesGenerales":{
+        "NombreCompania": "SupermercadoColombia",
+        "Representante": "Daniel Hernandez",
+        "Direccion": "Cr 123 # 55 - 32 Norte",
+        "Ciudad": "Bogota",
+        "Telefono": "12345678"
+    },
+    "ConstantesIndividual":{
+        "NombreIndividual": "Jimena Vargas",
+        "NombreCompaniaIndividual": "N/A",
+        "DireccionIndividual": "Cr 456 # 55 - 32 Sur",
+        "CiudadIndividual": "Bogota",
+        "Telefonoindividual": "012343342"
+    }
+}

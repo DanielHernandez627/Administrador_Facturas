@@ -1,7 +1,11 @@
 import json
 
 global name_File
+global name_File2
+global name_File3
 name_File = "productos.json"
+name_File2 = "variablesword.json"
+name_File3 = "constantes.json"
 
 
 def read_Json_Category():
@@ -23,7 +27,7 @@ def read_Json_Product(category_select):
     return product_Array
 
 
-def read_Json_Val_Product(category_select,product_select):
+def read_Json_Val_Product(category_select, product_select):
     valor = 0
     with open(name_File, "r") as j:
         category = json.load(j)
@@ -34,7 +38,7 @@ def read_Json_Val_Product(category_select,product_select):
     return valor
 
 
-def search_id_Product(category_select,product_select):
+def search_id_Product(category_select, product_select):
     with open(name_File, "r") as j:
         category = json.load(j)
     products = category[category_select]
@@ -42,3 +46,13 @@ def search_id_Product(category_select,product_select):
         if data["nombre"] == product_select:
             valor = data["id"]
     return valor
+
+
+def read_constants():
+    with open(name_File3) as archivo:
+        datos = json.load(archivo)
+
+    constants_generals = datos["ConstantesGenerales"]
+    constants_individuals = datos["ConstantesIndividual"]
+
+    return constants_generals, constants_individuals
