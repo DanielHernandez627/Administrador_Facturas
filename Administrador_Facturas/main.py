@@ -65,7 +65,6 @@ def create_row():
     calcu_total_pay()
     can1 = text_box_cant.get("1.0", 'end-1c')
     invoice_products.append([product,cantidad,price,can1])
-    print(invoice_products)
     table.insert("", tk.END, values=(id, product, cantidad))
 
 
@@ -97,6 +96,8 @@ def desc_value_total():
         values = table.item(selected_row, 'values')
         if values:
             column_value = values[2]
+            column_value_product = values[1]
+            del_arra(column_value_product)
             desc_iva(column_value)
             desc_total_pay(column_value)
             subtract_value(column_value)
@@ -132,6 +133,15 @@ def desc_total_pay(value):
     total = float(ant) - neto
     text_box_pagar.delete("1.0", tk.END)
     text_box_pagar.insert(tk.END, total)
+
+
+def del_arra(product):
+    for arreglo in invoice_products:
+        if product in arreglo:
+            invoice_products.remove(arreglo)
+            break
+
+
 
 
 # Interfaz
