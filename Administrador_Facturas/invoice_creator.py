@@ -1,3 +1,5 @@
+import os
+
 from docxtpl import DocxTemplate
 from datetime import datetime
 import read_Files as rf
@@ -8,8 +10,7 @@ def replace_variables(data, iva, subtotal, total):
     fecha_formateada = fecha_actual.strftime("%d-%m-%Y")
     doc = DocxTemplate('Formato_Factura.docx')
     constants_generals, constants_individuals = rf.read_constants()
-
-    print(data)
+    file_name = ""
 
     new_dictionary = {
         'Nombrecompania': constants_generals["NombreCompania"],
@@ -52,4 +53,16 @@ def replace_variables(data, iva, subtotal, total):
                 new_dictionary[clave] = valor
 
     doc.render(new_dictionary)
-    doc.save('Factura' + fecha_formateada + '.docx')
+    file_name = file_checker('Factura' + fecha_formateada)
+    doc.save(file_name + '.docx')
+
+
+def file_checker(nombre_archivo):
+    contador = 1
+    nombre_base, extension = os.path.splitext(nombre_archivo+'.docx')
+
+    while os.path.exists(nombre_archivo):
+        nombre_archivo = f"{nombre_base}_{contador}{extension}"
+        contador += 1
+
+    return nombre_archivo
