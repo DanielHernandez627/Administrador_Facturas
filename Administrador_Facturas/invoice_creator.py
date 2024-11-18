@@ -3,6 +3,7 @@ import os
 from docxtpl import DocxTemplate
 from datetime import datetime
 import read_Files as rf
+import xml.etree.ElementTree as ET
 
 
 def replace_variables(data, iva, subtotal, total):
@@ -54,6 +55,7 @@ def replace_variables(data, iva, subtotal, total):
 
     doc.render(new_dictionary)
     file_name = file_checker('Factura' + fecha_formateada)
+    xml_generator(file_name,new_dictionary)
     doc.save(file_name + '.docx')
 
 
@@ -66,3 +68,13 @@ def file_checker(nombre_archivo):
         contador += 1
 
     return nombre_archivo
+
+def xml_generator(nombre_archivo,diccionario):
+    root = ET.Element("Factura")
+
+    for key, value in diccionario.items():
+        child = ET.SubElement(root, key)
+        child.text = str(value)
+
+    tree = ET.ElementTree(root)
+    tree.write(str(nombre_archivo)+".xml", encoding="utf-8", xml_declaration=True)

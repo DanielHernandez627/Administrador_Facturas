@@ -72,6 +72,7 @@ def create_invoice():
     iva = text_box_iva.get("1.0", 'end-1c')
     total = text_box_pagar.get("1.0", 'end-1c')
     ic.replace_variables(invoice_products, iva, subtotal, total)
+    clean_interface()
 
 
 def delete_row():
@@ -137,6 +138,20 @@ def desc_total_pay(value):
     total = float(ant) - neto
     text_box_pagar.delete("1.0", tk.END)
     text_box_pagar.insert(tk.END, total)
+
+
+def clean_interface():
+    #Limpieza de tabla
+    for item in table.get_children():
+        table.delete(item)
+    #Limpieza de campos
+    text_box_total.delete("1.0", tk.END)
+    text_box_total.insert("1.0", 0)
+    text_box_iva.delete("1.0", tk.END)
+    text_box_iva.insert("1.0", 0)
+    text_box_pagar.delete("1.0", tk.END)
+    text_box_pagar.insert("1.0", 0)
+    
 
 
 # Interfaz
