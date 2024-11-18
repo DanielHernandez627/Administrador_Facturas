@@ -1,113 +1,112 @@
 {
-    "frutas": [
+   "alimentacion": [
        {
-          "id": 1,
-          "nombre": "Manzanas",
-          "precio": 2500
+           "id": 1,
+           "nombre": "Preparacion de almuerzos",
+           "precio": 20000
        },
        {
-          "id": 2,
-          "nombre": "Platanos",
-          "precio": 2000
+           "id": 2,
+           "nombre": "Catering para eventos pequenos",
+           "precio": 50000
        },
        {
-          "id": 3,
-          "nombre": "Fresas",
-          "precio": 4000
+           "id": 3,
+           "nombre": "Clases de cocina a domicilio",
+           "precio": 40000
        },
        {
-          "id": 4,
-          "nombre": "Pinas",
-          "precio": 5000
+           "id": 4,
+           "nombre": "Entrega de comidas caseras",
+           "precio": 25000
        }
-    ],
-    "vegetales": [
+   ],
+   "mantenimiento_hogar": [
        {
-          "id": 5,
-          "nombre": "Lechuga",
-          "precio": 1500
+           "id": 5,
+           "nombre": "Limpieza general de casas",
+           "precio": 30000
        },
        {
-          "id": 6,
-          "nombre": "Tomates",
-          "precio": 3000
+           "id": 6,
+           "nombre": "Limpieza de banos",
+           "precio": 15000
        },
        {
-          "id": 7,
-          "nombre": "Aguacate",
-          "precio": 2000
+           "id": 7,
+           "nombre": "Jardineria basica",
+           "precio": 20000
        },
        {
-          "id": 8,
-          "nombre": "Pepinos",
-          "precio": 2500
+           "id": 8,
+           "nombre": "Limpieza de vidrios",
+           "precio": 25000
        }
-    ],
-    "carnes": [
+   ],
+   "eventos": [
        {
-          "id": 9,
-          "nombre": "Pollo",
-          "precio": 10000
+           "id": 9,
+           "nombre": "Decoracion para fiestas",
+           "precio": 60000
        },
        {
-          "id": 10,
-          "nombre": "Res",
-          "precio": 20000
+           "id": 10,
+           "nombre": "Organizacion de eventos pequenos",
+           "precio": 80000
        },
        {
-          "id": 11,
-          "nombre": "Cerdo",
-          "precio": 15000
+           "id": 11,
+           "nombre": "Fotografia en eventos",
+           "precio": 100000
        },
        {
-          "id": 12,
-          "nombre": "Salmon",
-          "precio": 25000
+           "id": 12,
+           "nombre": "Alquiler de equipos de sonido",
+           "precio": 50000
        }
-    ],
-    "bebidas": [
+   ],
+   "transporte": [
        {
-          "id": 13,
-          "nombre": "Agua",
-          "precio": 2000
+           "id": 13,
+           "nombre": "Traslado de mercancias pequenas",
+           "precio": 30000
        },
        {
-          "id": 14,
-          "nombre": "Refresco",
-          "precio": 3000
+           "id": 14,
+           "nombre": "Servicio de transporte local",
+           "precio": 40000
        },
        {
-          "id": 15,
-          "nombre": "Cerveza",
-          "precio": 5000
+           "id": 15,
+           "nombre": "Entrega de paquetes",
+           "precio": 20000
        },
        {
-          "id": 16,
-          "nombre": "Vino",
-          "precio": 15000
+           "id": 16,
+           "nombre": "Alquiler de vehiculo con conductor",
+           "precio": 80000
        }
-    ],
-    "productos de limpieza": [
+   ],
+   "asesorias": [
        {
-          "id": 17,
-          "nombre": "Jabon",
-          "precio": 3000
+           "id": 17,
+           "nombre": "Asesoria en diseno grafico",
+           "precio": 50000
        },
        {
-          "id": 18,
-          "nombre": "Limpiador de bano",
-          "precio": 5000
+           "id": 18,
+           "nombre": "Clases particulares (matematicas, idiomas)",
+           "precio": 30000
        },
        {
-          "id": 19,
-          "nombre": "Detergente",
-          "precio": 7000
+           "id": 19,
+           "nombre": "Asesoria tecnologica (uso de software)",
+           "precio": 35000
        },
        {
-          "id": 20,
-          "nombre": "Limpiador de vidrios",
-          "precio": 4000
+           "id": 20,
+           "nombre": "Consultoria en negocios pequenos",
+           "precio": 70000
        }
-    ]
- }
- 
+   ]
+}

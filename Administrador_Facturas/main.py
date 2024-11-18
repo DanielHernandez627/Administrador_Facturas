@@ -13,12 +13,12 @@ invoice_products = []
 def read_products(category_selected):
     for data in rf.read_Json_Product(category_selected):
         products.append(data)
-    price = rf.read_Json_Val_Product(category_selected, "Manzanas")
+    price = rf.read_Json_Val_Product(category_selected, "Preparación de almuerzos")
     lb2.config(text="Valor Producto: " + str(price))
 
 
 def read_Categories():
-    read_products("frutas")
+    read_products("alimentacion")
     return rf.read_Json_Category()
 
 
